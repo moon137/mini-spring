@@ -1,4 +1,4 @@
-package com.jing.test.controllers;
+package com.jing.test.controller;
 
 import com.jing.framework.beans.AutoWired;
 import com.jing.framework.web.mvc.Controller;

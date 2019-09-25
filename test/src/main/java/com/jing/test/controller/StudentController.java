@@ -1,13 +1,8 @@
-package com.jing.test.controllers;
+package com.jing.test.controller;
 
 import com.jing.framework.beans.AutoWired;
 import com.jing.framework.web.mvc.*;
 import com.jing.test.service.StudentService;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * @author GUO
