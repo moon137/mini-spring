@@ -23,12 +23,13 @@ public class MiniApplication {
             // 因为扫描是从 application 开始的
             List<Class<?>> classList = ClassScanner.scannerClass(cls.getPackage().getName());
             // 初始化bean，实现依赖注入
+            System.out.println("===============开始依赖注入===============");
             BeanFactory.intBean(classList);
+            System.out.println("===============结束依赖注入===============\n\n");
             // 解决mapping
+            System.out.println("===============注册requestMapping===============");
             HandlerManager.resolveMappingHandler(classList);
-
-            classList.forEach(it-> System.out.println("成功注册："+it));
-
+            System.out.println("===============注册requestMapping完成===============\n\n");
             System.out.println(" .----------------.  .----------------.  .-----------------. .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .-----------------. .----------------. \n" +
                     "| .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |\n" +
                     "| | ____    ____ | || |     _____    | || | ____  _____  | || |     _____    | || |    _______   | || |   ______     | || |  _______     | || |     _____    | || | ____  _____  | || |    ______    | |\n" +

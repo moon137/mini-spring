@@ -56,6 +56,7 @@ public class HandlerManager {
 
                     mappingHandler = new MappingHandler(uri, method,requestMethod, cls, params);
                     mappingHandlerList.add(mappingHandler);
+                    System.out.printf("成功解析URI=%s,controller=%s%n", uri, cls);
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
                 } catch (InstantiationException e) {

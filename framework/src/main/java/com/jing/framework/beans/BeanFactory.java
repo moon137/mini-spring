@@ -30,6 +30,7 @@ public class BeanFactory {
             int remainSize = toCreated.size();
             for (int i = 0; i < toCreated.size(); i++) {
                 if(finishCreate(toCreated.get(i))){
+                    System.out.println("成功注入：" + toCreated.get(i));
                     toCreated.remove(i);
                 }
             }
